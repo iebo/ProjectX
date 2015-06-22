@@ -6,24 +6,30 @@
 	<head>
 	<body>
 
-		<h1>JavaScript in Body</h1>
+		<h1>Fråga Tom</h1>
 
 		<p id="answer">Hej, jag heter Tom. Vill du fråga något?</p>
 		<p id="bubbla">Det verkar som en trevlig person.</p>
 
-		<button type="button" onclick="myFunction; insultGenerator()">Try it</button>
+		<button type="button" onclick="myFunction(), insultGenerator()">Try it</button>
 
 		<script>
 		function myFunction() {
 		    var question = prompt("Fråga Tom något"); //ställa frågan
 		    
-		    if (question === "Vad är roten ur 16?"){
+		    if(question.indexOf("?") < 0){
+		    	document.getElementById("answer").innerHTML = "Det där är inte en fråga din dumskalle";
+		    }
+		    else if (question === "Vad är roten ur 16?"){
 		    	document.getElementById("answer").innerHTML = "4";
 		    } else if(question.length === 0){
 		    	document.getElementById("answer").innerHTML = "Du måste skriva din fråga med hjälp av tangentbordet";
-		    } else{
-		    	document.getElementById("answer").innerHTML = "Kan du inte ställa en vettig fråga?";
+		    } else if(question.indexOf("favoritfärg") > -1){
+		    	document.getElementById("answer").innerHTML = "En färg";
 		    }
+		    else{
+		    	document.getElementById("answer").innerHTML = "Kan du inte ställa en vettig fråga?";
+		    };
 
 		}
 		function insultGenerator(){
