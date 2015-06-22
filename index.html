@@ -7,20 +7,21 @@
 	<body>
 
 		<h1>Fråga Tom</h1>
-
+		<img src="https://mail.google.com/mail/u/0/?ui=2&ik=b8266a2e07&view=fimg&th=14e1ae8173ad8997&attid=0.1&disp=inline&safe=1&attbid=ANGjdJ8xf3Xc8xNeHeTfo3Bfkjz7AISa-g8-ikndF-Czm8VfSuqp3AG1Q8EovdqDyocURz7pL0teP1I_gYoJxcy1CsHb1LMa9dtKa9kOmlexTX0BvNUWtqeDXA3A-Ko&ats=1434976356100&rm=14e1ae8173ad8997&zw&sz=w1342-h523"> 
 		<p id="answer">Hej, jag heter Tom. Vill du fråga något?</p>
-		<p id="bubbla">Det verkar som en trevlig person.</p>
+		<input type="text" id="question" value=""> <!--kom ihåg att göra så det går att trycka på enter -->
 
-		<button type="button" onclick="myFunction(), insultGenerator()">Try it</button>
+		<button type="button" onclick="myFunction()">Try it</button>
 
 		<script>
 		function myFunction() {
-		    var question = prompt("Fråga Tom något"); //ställa frågan
 		    
+		    var question = document.getElementById("question").value;
+		    var question = question.toLowerCase();
 		    if(question.indexOf("?") < 0){
 		    	document.getElementById("answer").innerHTML = "Det där är inte en fråga din dumskalle";
-		    }
-		    else if (question === "Vad är roten ur 16?"){
+		    } //om det inte är en fråga
+		    else if (question === "vad är roten ur 16?"){
 		    	document.getElementById("answer").innerHTML = "4";
 		    } else if(question.length === 0){
 		    	document.getElementById("answer").innerHTML = "Du måste skriva din fråga med hjälp av tangentbordet";
@@ -28,13 +29,13 @@
 		    	document.getElementById("answer").innerHTML = "En färg";
 		    }
 		    else{
-		    	document.getElementById("answer").innerHTML = "Kan du inte ställa en vettig fråga?";
+		    	insultGenerator();
 		    };
 
 		}
 		function insultGenerator(){
 			
-			var x = Math.floor((Math.random() * 10) + 1); //assigns random integer between 1 and 100 to the new variable x
+			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new variable x
 			
 			if (x > 50){
 				var insult = "Är du helt dum i huvudet?";
@@ -42,7 +43,7 @@
 			} else{
 				var insult = "Den här snubben kan ju inte stava.";
 			}
-			document.getElementById("bubbla").innerHTML = insult;
+			document.getElementById("answer").innerHTML = insult;
 		}    
 
 		
