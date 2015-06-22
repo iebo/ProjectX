@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang = "sv">
-<head>
-  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		  <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
 
-</head>
-<body>
-  
-  <script>
-    
-  </script>
-</body>
+	<head>
+	<body>
 
-</html>
+		<h1>JavaScript in Body</h1>
+
+		<p id="answer">Hej. Jag heter Tom. Vill du fråga något?</p>
+		<p id="bubbla">Det verkar som en trevlig person.</p>
+
+		<button type="button" onclick="insultGenerator()">Try it</button>
+
+		<script>
+		function myFunction() {
+		    var question = prompt("Fråga Tom något"); //ställa frågan
+		    
+		    if (question === "Vad är roten ur 16?"){
+		    	document.getElementById("answer").innerHTML = "4";
+		    } else if(question.length === 0){
+		    	document.getElementById("answer").innerHTML = "Du måste skriva din fråga med hjälp av tangentbordet";
+		    } else{
+		    	document.getElementById("answer").innerHTML = "Kan du inte ställa en vettig fråga?";
+		    }
+
+		}
+		function insultGenerator(){
+			
+			var x = Math.floor((Math.random() * 10) + 1); //assigns random integer between 1 and 100 to the new variable x
+			
+			if (x > 50){
+				var insult = "Är du helt dum i huvudet?";
+
+			} else{
+				var insult = "Den här snubben kan ju inte stava.";
+			}
+			document.getElementById("bubbla").innerHTML = insult;
+		}    
+
+		
+		</script>
+
+	</body>
+</html> 
