@@ -13,10 +13,10 @@
 		<p id="answer">Hej, jag heter Tom. Vill du fråga något?</p>
 		<input type="text" id="question" value=""> <!--kom ihåg att göra så det går att trycka på enter -->
 
-		<button type="button" class="btn  btn-primary" onclick="myFunction()">Fråga!</button>
+		<button type="button" class="btn  btn-primary" onclick="questionAI()">Fråga!</button>
 
 		<script>
-		function myFunction() {
+		function questionAI() {
 		    
 		    var question = document.getElementById("question").value;
 		    var question = question.toLowerCase(); //sets all letters in question to lowercase so that the question is not case sensitive
