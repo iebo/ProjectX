@@ -29,12 +29,24 @@
 		    	document.getElementById("answer").innerHTML = "Du måste skriva din fråga med hjälp av tangentbordet";
 		    } else if(question.indexOf("favoritfärg") > -1){ //checks if the word "favoritfärg" exists in the question
 		    	document.getElementById("answer").innerHTML = "En färg";
+		    } else if(question.indexOf("mcdonald") > -1){ //checks if the word "mcdonald" exists in the question
+		    	changeToLink("http://www.mcdonalds.se/se/restauranger.html", "Här finns McDonald's.");
 		    }
 		    else{
 		    	insultGenerator(); //runs the random insult script if the question does not have a predefined answer
 		    };
-
+		};
+		function changeToLink(link, linkText) {
+			var str = linkText;
+			var result = str.link(link);
+			document.getElementById("answer").innerHTML = result;
 		}
+
+
+
+
+
+		
 		function insultGenerator(){ //script that chooses a random insult
 			
 			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new variable x
