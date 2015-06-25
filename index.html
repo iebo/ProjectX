@@ -46,9 +46,10 @@
 		    	document.getElementById("answer").innerHTML = "Du måste skriva din fråga med hjälp av tangentbordet";
 		    } else if(question.indexOf("?") < 0){ //checks if question has a question mark. if it does not it says "det där är inte en fråga"
 		    	document.getElementById("answer").innerHTML = "Det där är inte en fråga";//om det inte är en fråga
-		    } else if(question.indexOf("?") > -1 && question.indexOf("?") > -1){
-		    	document.getElementById("answer").innerHTML = "En fråga åt gången.";//if the question contains two question marks.
-		    } else if(question.indexOf("eller") > -1){ //checks if the word "eller" exists in the question
+		    } // else if(question.indexOf("?") > -1 && question.indexOf("?") > -1){
+		    	/*document.getElementById("answer").innerHTML = "En fråga åt gången.";//if the question contains two question marks.
+		    } */
+		    else if(question.indexOf("eller") > -1){ //checks if the word "eller" exists in the question
 		    	document.getElementById("answer").innerHTML = "Båda.";
 		    } else if (question === "vad är roten ur 16?"){ // checks if the answer is "vad är roten ur 16?" 
 		    	document.getElementById("answer").innerHTML = "4";
@@ -63,8 +64,12 @@
 		    	addImage("http://www.clker.com/cliparts/Q/j/a/y/T/q/ghost.svg", "Spöke");
 		    } else if(question.indexOf("ufo") > -1){ //checks if the word "ufo" exists in the question.
 		    	changeToLink("https://en.wikipedia.org/wiki/Unidentified_flying_object", "UFO:n finns.");
-		    } else if(question.indexOf("titta") > -1 && question.indexOf("på") > -1){ //checks if the word "" exists in the question
+		    } else if(question.indexOf("titta") > -1 && question.indexOf("på") > -1){ //checks if the word "titta" & "på" exists in the question
 		    	document.getElementById("answer").innerHTML = "På Tom.";
+		    } else if(question.indexOf("fyller") > -1 && question.indexOf("år") > -1){ //checks if the word "fyller" & "år" exists in the question
+		    	document.getElementById("answer").innerHTML = "Varje år.";
+		    }else if(question.indexOf("elefanter") > -1 && question.indexOf("flyga") > -1){ //checks if the word "fyller" & "år" exists in the question
+		    	document.getElementById("answer").innerHTML = "Bara dumbo.";
 		    } else{
 		    	insultGenerator(); //runs the random insult script if the question does not have a predefined answer
 		    };
@@ -86,12 +91,7 @@
 			var result = str.link(link);
 			document.getElementById("answer").innerHTML = result;
 		}
-
-
-
-
-
-		
+	
 		function insultGenerator(){ //script that chooses a random insult
 			
 			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new variable x
