@@ -31,10 +31,12 @@
 		    	document.getElementById("answer").innerHTML = "På Tom.";
 		    } else if(question.indexOf("fyller") > -1 && question.indexOf("år") > -1){ //checks if the word "fyller" & "år" exists in the question
 		    	document.getElementById("answer").innerHTML = "Varje år.";
-		    } else if(question.indexOf("elefanter") > -1 && question.indexOf("flyga")|| ("flyger") > -1){ //checks if the word "fyller" & "år" exists in the question
+		    } else if(question.indexOf("elefanter") > -1 && question.indexOf("flyga")|| ("flyger") > -1){ //checks if the word "elefanter" & "flyga/flyger" exists in the question
 		    	document.getElementById("answer").innerHTML = "Bara dumbo.";
 		    } else if(question.indexOf("lever") > -1){ //checks if the word "lever" exists in the question
 		    	document.getElementById("answer").innerHTML = "Det beror på vad man menar med lever.";
+		    } else if(question.indexOf("umeå") > -1 && question.indexOf("är") > -1){ //checks if the word "Umeå" & "är" exists in the question
+		    	document.getElementById("answer").innerHTML = "Umeå är fantastiskt.";
 		    } else{
 		    	ifNoAnswer (); //runs the random insult ifNoanswer script if the question does not have a predefined answer
 		    };
@@ -60,8 +62,11 @@
 			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new local variable x
 			if (x > 50){
 				insultGenerator();
-			} else{
+			} else if (x > 25) {
 				changeToLink("http://lmgtfy.com/?q=" + questionAsked, "Tryck här") 
+			} else {
+				document.getElementById("answer").innerHTML = 'Det beror på vad du menar med:' + ' "' + questionAsked + '"';
+
 			}
 
 		}
@@ -72,17 +77,10 @@
 		function insultGenerator(){ //script that chooses a random insult
 			
 			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new local variable x
-			
-			if (x > 50){
-				var insult = "Är du helt dum i huvudet?";
-
-			} else if(x < 50){
-				var insult = 'Det beror på vad du menar med:' + ' "' + questionAsked + '"';
-
-			} else{
-				var insult = "Den här snubben kan ju inte stava.";
-			}
-			document.getElementById("answer").innerHTML = insult;
+			var insults = ["Är du helt dum i huvudet?", "Den här snubben kan ju inte stava."]; 
+			var i = insults.length;
+			var insultPosition = Math.floor((Math.random() * i) );
+			document.getElementById("answer").innerHTML = insults [insultPosition];
 		}    
 
 		
