@@ -46,10 +46,9 @@
 		    	document.getElementById("answer").innerHTML = "Du måste skriva din fråga med hjälp av tangentbordet";
 		    } else if(question.indexOf("?") < 0){ //checks if question has a question mark. if it does not it says "det där är inte en fråga"
 		    	document.getElementById("answer").innerHTML = "Det där är inte en fråga";//om det inte är en fråga
-		    } // else if(question.indexOf("?") > -1 && question.indexOf("?") > -1){
-		    	/*document.getElementById("answer").innerHTML = "En fråga åt gången.";//if the question contains two question marks.
-		    } */
-		    else if(question.indexOf("eller") > -1){ //checks if the word "eller" exists in the question
+		    } else if(question.indexOf("? ") > -1 && question.indexOf("?") > -1){
+		    	document.getElementById("answer").innerHTML = "En fråga åt gången.";//if the question contains two question marks.
+		    } else if(question.indexOf("eller") > -1){ //checks if the word "eller" exists in the question
 		    	document.getElementById("answer").innerHTML = "Båda.";
 		    } else if (question === "vad är roten ur 16?"){ // checks if the answer is "vad är roten ur 16?" 
 		    	document.getElementById("answer").innerHTML = "4";
