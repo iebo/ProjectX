@@ -11,7 +11,7 @@
 		<h1>Fråga Tom</h1>
 		<img src="ProjectX/Tom.jpg"> 
 		<p id="answer">Hej, jag heter Tom. Vill du fråga något?</p>
-		<input type="text" id="question" value=""> <!--kom ihåg att göra så det går att trycka på enter -->
+		<input type="text" id="question" value=""> <!--kom ihåg att göra så det går att trycka på enter & target blank-->
 
 		<button type="button" class="btn  btn-primary" onclick="questionAI()">Fråga!</button>
 
@@ -31,8 +31,9 @@
 		    	document.getElementById("answer").innerHTML = "En färg";
 		    } else if(question.indexOf("mcdonald") > -1){ //checks if the word "mcdonald" exists in the question
 		    	changeToLink("http://www.mcdonalds.se/se/restauranger.html", "Här finns McDonald's.");
-		    }
-		    else{
+		    } else if(question.indexOf("var är jag?") > -1){ //checks if the word "var är jag?" exists in the question, might have to change to something smarter! :)
+		    	changeToLink("http://www.where-am-i.net/", "Du är här.");
+		    } else{
 		    	insultGenerator(); //runs the random insult script if the question does not have a predefined answer
 		    };
 		};
