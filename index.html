@@ -42,13 +42,16 @@
 		    
 		    var question = document.getElementById("question").value;
 		    var question = question.toLowerCase(); //sets all letters in question to lowercase so that the question is not case sensitive
-		    if(question.indexOf("?") < 0){ //checks if question has a question mark. if it does not it says "det där är inte en fråga"
-		    	document.getElementById("answer").innerHTML = "Det där är inte en fråga";
-		    } //om det inte är en fråga
-		    else if (question === "vad är roten ur 16?"){ // checks if the answer is "vad är roten ur 16?" 
-		    	document.getElementById("answer").innerHTML = "4";
-		    } else if(question.length === 0){ //checks if there are any characters in the question
+		    if(question.length === 0){ //checks if there are any characters in the question
 		    	document.getElementById("answer").innerHTML = "Du måste skriva din fråga med hjälp av tangentbordet";
+		    } else if(question.indexOf("?") < 0){ //checks if question has a question mark. if it does not it says "det där är inte en fråga"
+		    	document.getElementById("answer").innerHTML = "Det där är inte en fråga";//om det inte är en fråga
+		    } else if(question.indexOf("?") > -1 && question.indexOf("?") > -1){
+		    	document.getElementById("answer").innerHTML = "En fråga åt gången.";//if the question contains two question marks.
+		    } else if(question.indexOf("eller") > -1){ //checks if the word "eller" exists in the question
+		    	document.getElementById("answer").innerHTML = "Båda.";
+		    } else if (question === "vad är roten ur 16?"){ // checks if the answer is "vad är roten ur 16?" 
+		    	document.getElementById("answer").innerHTML = "4";
 		    } else if(question.indexOf("favoritfärg") > -1){ //checks if the word "favoritfärg" exists in the question
 		    	document.getElementById("answer").innerHTML = "En färg";
 		    } else if(question.indexOf("mcdonald") > -1){ //checks if the word "mcdonald" exists in the question
@@ -60,8 +63,8 @@
 		    	addImage("http://www.clker.com/cliparts/Q/j/a/y/T/q/ghost.svg", "Spöke");
 		    } else if(question.indexOf("ufo") > -1){ //checks if the word "ufo" exists in the question.
 		    	changeToLink("https://en.wikipedia.org/wiki/Unidentified_flying_object", "UFO:n finns.");
-		    } else if(question.indexOf("eller") > -1){ //checks if the word "eller" exists in the question
-		    	document.getElementById("answer").innerHTML = "Båda.";
+		    } else if(question.indexOf("titta") > -1 && question.indexOf("på") > -1){ //checks if the word "" exists in the question
+		    	document.getElementById("answer").innerHTML = "På Tom.";
 		    } else{
 		    	insultGenerator(); //runs the random insult script if the question does not have a predefined answer
 		    };
