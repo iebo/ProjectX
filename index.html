@@ -15,6 +15,7 @@
 			</div>
 		</div>
 
+<<<<<<< HEAD
 		<div class="row">
 			<!-- Space 1 (användaren, fråga) -->
 			<div class="col-md-6">
@@ -23,13 +24,17 @@
 
 			<!-- Space 2 (Tom, svar)-->
 			<div class="col-md-6">
+				<h1>Fråga Tom</h1>
 					<p id="answer">Hej, jag heter Tom. Vill du fråga något?</p>
-
 					
 
             <!-- Ovanför är -->
 
 					<input type="text" id="question" value=""> <!--kom ihåg att göra så det går att trycka på enter -->
+
+		
+		 
+		
 
 		<button type="button" class="btn  btn-primary" onclick="questionAI()">Fråga!</button>
 
@@ -47,12 +52,25 @@
 		    	document.getElementById("answer").innerHTML = "Du måste skriva din fråga med hjälp av tangentbordet";
 		    } else if(question.indexOf("favoritfärg") > -1){ //checks if the word "favoritfärg" exists in the question
 		    	document.getElementById("answer").innerHTML = "En färg";
-		    }
-		    else{
+		    } else if(question.indexOf("mcdonald") > -1){ //checks if the word "mcdonald" exists in the question
+		    	changeToLink("http://www.mcdonalds.se/se/restauranger.html", "Här finns McDonald's.");
+		    } else if(question.indexOf("var är jag?") > -1){ //checks if the word "var är jag?" exists in the question, might have to change to something smarter! :)
+		    	changeToLink("http://www.where-am-i.net/", "Du är här.");
+		    } else{
 		    	insultGenerator(); //runs the random insult script if the question does not have a predefined answer
 		    };
-
+		};
+		function changeToLink(link, linkText) {
+			var str = linkText;
+			var result = str.link(link);
+			document.getElementById("answer").innerHTML = result;
 		}
+
+
+
+
+
+		
 		function insultGenerator(){ //script that chooses a random insult
 			
 			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new variable x
@@ -69,7 +87,7 @@
 		
 		</script>
 		<!-- Här är Toms bild -->
-		<img src="https://lh4.googleusercontent.com/yt9O81mcTmKO51MA02ieMsxz_0JCxB-h0PjAMBNi_9nkP_mAjIyuoqw72ZCH8DnwDUVZIDqF6RjZpNM=w1342-h547-rw">
+		<img src="C:\Users\Sommar\ProjectX\NyaTom.png">
 			</div>
 		</div>
 		</div>
