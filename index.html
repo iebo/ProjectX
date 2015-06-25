@@ -68,8 +68,10 @@
 		    	document.getElementById("answer").innerHTML = "På Tom.";
 		    } else if(question.indexOf("fyller") > -1 && question.indexOf("år") > -1){ //checks if the word "fyller" & "år" exists in the question
 		    	document.getElementById("answer").innerHTML = "Varje år.";
-		    }else if(question.indexOf("elefanter") > -1 && question.indexOf("flyga") > -1){ //checks if the word "fyller" & "år" exists in the question
+		    } else if(question.indexOf("elefanter") > -1 && question.indexOf("flyga") > -1){ //checks if the word "fyller" & "år" exists in the question
 		    	document.getElementById("answer").innerHTML = "Bara dumbo.";
+		    } else if(question.indexOf("lever") > -1){ //checks if the word "lever" exists in the question
+		    	document.getElementById("answer").innerHTML = "Det beror på vad man menar med lever.";
 		    } else{
 		    	insultGenerator(); //runs the random insult script if the question does not have a predefined answer
 		    };
@@ -98,6 +100,9 @@
 			
 			if (x > 50){
 				var insult = "Är du helt dum i huvudet?";
+
+			} else if(x < 50){
+				var insult = 'Det beror på vad du menar med:' + ' "' + answer + '"';
 
 			} else{
 				var insult = "Den här snubben kan ju inte stava.";
