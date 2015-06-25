@@ -35,6 +35,14 @@
 		    	document.getElementById("answer").innerHTML = "Bara dumbo.";
 		    } else if(question.indexOf("lever") > -1){ //checks if the word "lever" exists in the question
 		    	document.getElementById("answer").innerHTML = "Det beror på vad man menar med lever.";
+		    } else if(question.indexOf("umeå") > -1 && question.indexOf("stad") > -1){ //checks if the word "Umeå" & "stad" exists in the question
+		    	document.getElementById("answer").innerHTML = "Umeå är en stad.";
+		    } else if(question.indexOf("umeå") > -1 && question.indexOf("land") > -1){ //checks if the word "Umeå" & "land" exists in the question
+		    	document.getElementById("answer").innerHTML = "Umeå är inte ett land. Umeå ligger i Sverige";
+		    } else if(question.indexOf("umeå") > -1 && question.indexOf("kommun") > -1){ //checks if the word "Umeå" & "kommun" exists in the question
+		    	changeToLink("http://www.umea.se/umeakommun.4.1821d6e811c67c7e79580004672.html", "Umeå är en kommun.");
+		    } else if(question.indexOf("umeå") > -1 && question.indexOf("län") > -1){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Umeå är inte ett län. Umeå ligger i Västerbottens län.";
 		    } else if(question.indexOf("umeå") > -1 && question.indexOf("är") > -1){ //checks if the word "Umeå" & "är" exists in the question
 		    	document.getElementById("answer").innerHTML = "Umeå är fantastiskt.";
 		    } else{
