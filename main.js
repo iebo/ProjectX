@@ -31,10 +31,12 @@
 		    	document.getElementById("answer").innerHTML = "På Tom.";
 		    } else if(question.indexOf("fyller") > -1 && question.indexOf("år") > -1){ //checks if the word "fyller" & "år" exists in the question
 		    	document.getElementById("answer").innerHTML = "Varje år.";
-		    } else if(question.indexOf("elefanter") > -1 && question.indexOf("flyga")|| ("flyger") > -1){ //checks if the word "fyller" & "år" exists in the question
+		    } else if(question.indexOf("elefanter") > -1 && question.indexOf("flyga")|| ("flyger") > -1){ //checks if the word "elefanter" & "flyga/flyger" exists in the question
 		    	document.getElementById("answer").innerHTML = "Bara dumbo.";
 		    } else if(question.indexOf("lever") > -1){ //checks if the word "lever" exists in the question
 		    	document.getElementById("answer").innerHTML = "Det beror på vad man menar med lever.";
+		    } else if(question.indexOf("umeå") > -1 && question.indexOf("är") > -1){ //checks if the word "Umeå" & "är" exists in the question
+		    	document.getElementById("answer").innerHTML = "Umeå är fantastiskt.";
 		    } else{
 		    	ifNoAnswer (); //runs the random insult ifNoanswer script if the question does not have a predefined answer
 		    };
