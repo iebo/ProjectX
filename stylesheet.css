@@ -1,16 +1,15 @@
-
 #Rubrik {
 	font-family:Georgia;
 	text-align:center;
 	background-color:yellow;
 }
-img {
-
+#tom{
+	width: 40%;
+	position: right;
 }
 
-body{
-	background-color: blue;
-}
+
+
 #gubbe1 {
 	width: 30%;
 }

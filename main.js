@@ -85,14 +85,10 @@
 		function insultGenerator(){ //script that chooses a random insult
 			
 			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new local variable x
-			
-			if (x > 50){
-				var insult = "Är du helt dum i huvudet?";
-
-			} else{
-				var insult = "Den här snubben kan ju inte stava.";
-			}
-			document.getElementById("answer").innerHTML = insult;
+			var insults = ["Är du helt dum i huvudet?", "Den här snubben kan ju inte stava."]; 
+			var i = insults.length;
+			var insultPosition = Math.floor((Math.random() * i) );
+			document.getElementById("answer").innerHTML = insults [insultPosition];
 		}    
 
 		
