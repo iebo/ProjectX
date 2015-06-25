@@ -60,8 +60,11 @@
 			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new local variable x
 			if (x > 50){
 				insultGenerator();
-			} else{
+			} else if (x > 25) {
 				changeToLink("http://lmgtfy.com/?q=" + questionAsked, "Tryck här") 
+			} else {
+				document.getElementById("answer").innerHTML = 'Det beror på vad du menar med:' + ' "' + questionAsked + '"';
+
 			}
 
 		}
@@ -75,9 +78,6 @@
 			
 			if (x > 50){
 				var insult = "Är du helt dum i huvudet?";
-
-			} else if(x < 50){
-				var insult = 'Det beror på vad du menar med:' + ' "' + questionAsked + '"';
 
 			} else{
 				var insult = "Den här snubben kan ju inte stava.";
