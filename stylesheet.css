@@ -17,9 +17,11 @@
 	position: right;
 }
 
-
-
 #gubbe1 {
 	margin-top: 300px;
 	width: 50%;
 }
+
+#answer {
+	background-color: white;
+} /* change background color of answer to white*/
