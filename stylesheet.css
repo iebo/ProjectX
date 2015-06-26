@@ -16,6 +16,12 @@
 	z-index: 1000;
 	margin: auto;
 }
+
+#question {
+	z-index: 900;
+
+}
+
 #tom{
 	width: 20%;
 	position: fixed;
@@ -31,5 +37,6 @@
 }
 
 #answer {
+	z-index: 800;
 	background-color: white;
 } /* change background color of answer to white*/
