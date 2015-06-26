@@ -7,19 +7,27 @@
 
 
 #Rubrik {
+	position: fixed;
+	width: 98%;
+	padding: 0px;
 	font-family:Georgia;
 	text-align:center;
 	background-color:yellow;
 	z-index: 1000;
+	margin: auto;
 }
 #tom{
-	width: 40%;
-	position: right;
+	width: 20%;
+	position: fixed;
+	right: 5px;
+	bottom: 0px;
 }
 
 #gubbe1 {
-	margin-top: 300px;
-	width: 50%;
+	width: 25%;
+	position: fixed;
+	left: 5px;
+	bottom: 0px;
 }
 
 #answer {
