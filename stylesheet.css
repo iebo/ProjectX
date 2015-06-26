@@ -5,10 +5,12 @@
 	
 }
 
+
 #Rubrik {
 	font-family:Georgia;
 	text-align:center;
 	background-color:yellow;
+	z-index: 1000;
 }
 #tom{
 	width: 40%;
