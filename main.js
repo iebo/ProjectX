@@ -30,7 +30,7 @@
 		    }
 		     else if(question.indexOf("sett") > -1 && question.indexOf("spöke") > -1){ //checks if the word "sett" & "spöke" exists in the question.
 		    	changeToLink("http://www.clker.com/cliparts/Q/j/a/y/T/q/ghost.svg", "Nu har du.");
-		    	addImage("http://www.clker.com/cliparts/Q/j/a/y/T/q/ghost.svg", "Spöke");
+		        document.body.style.background = "url('http://www.clker.com/cliparts/Q/j/a/y/T/q/ghost.svg') no-repeat center";
 		    }
 		     else if(question.indexOf("ufo") > -1){ //checks if the word "ufo" exists in the question.
 		    	changeToLink("https://en.wikipedia.org/wiki/Unidentified_flying_object", "UFO:n finns.");
@@ -76,16 +76,7 @@
 		    };
 		};
 
-		function addImage(imageLink, imageID) {
-			    var x = document.createElement("IMG");
-			    var imageLink;
-			    var imageID;
-			    x.setAttribute("src", imageLink);
-			    x.setAttribute("width", "100");
-			    x.setAttribute("width", "100");
-			    x.setAttribute("alt", imageID);
-			    document.body.appendChild(x);
-		} 
+		 
 
 		function changeToLink(link, linkText) {
 			var str = linkText;
