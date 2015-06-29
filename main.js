@@ -86,6 +86,8 @@
 
 		function changeBackground(backgroundLink) {
  		   document.body.style.background = "url('"+backgroundLink+"') no-repeat center top";
+ 		   document.getElementsByTagName("background")[0].setAttribute("class", "responsive");
+
 		}
 
 		function randomBackground(){

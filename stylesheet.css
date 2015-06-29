@@ -1,3 +1,7 @@
+body{
+	background-size: cover;
+}
+
 
 #prat1 {
 	margin-top: 10%;
@@ -40,10 +44,7 @@
 	bottom: 0px;
 }
 
-.questionAndBubble{
-	border:solid blue;
-	margin-left: 10%;
-}
+
 
 #answer {
 	margin-top: 15%;
