@@ -1,10 +1,18 @@
 
-
-
 #prat1 {
-	
+	margin-top: 10%;
+	margin-left: 25%;
+	display: inline;
+	position: absolute;
+	z-index: -1;
 }
 
+#question {
+	margin-left: 32%;
+	margin-top: 24%;
+	z-index: 900;
+	display: inline;
+}
 
 #Rubrik {
 	position: fixed;
@@ -17,10 +25,6 @@
 	margin: auto;
 }
 
-#question {
-	z-index: 900;
-
-}
 
 #tom{
 	width: 20%;
@@ -37,6 +41,10 @@
 }
 
 #answer {
+	margin-top: 15%;
+	margin-left: -41%;
+	position: absolute;
 	z-index: 800;
 	background-color: white;
+	display: inline;
 } /* change background color of answer to white*/
