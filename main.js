@@ -1,7 +1,11 @@
-
+		var newBackground = "";
 		var questionAsked = "";
+
 		function questionAI() {
+			changeBackground(newBackground);
+			
 			questionAsked = document.getElementById("question").value;		    
+
 		    var question = document.getElementById("question").value;
 		    var question = question.toLowerCase(); //sets all letters in question to lowercase so that the question is not case sensitive
 		    if(question.length === 0){ //checks if there are any characters in the question
@@ -71,9 +75,19 @@
 		     else if(question.indexOf("heter") > -1 && question.indexOf("du") > -1){ //checks if the word "Umeå" & "län" exists in the question
 		    	document.getElementById("answer").innerHTML = "Tom";
 			}
-		     else if(question.indexOf("äta")|| ("äter")|| ("åt")|| ("ätit") > -1 ){ //checks if the word "Umeå" & "län" exists in the question
+		     else if(question.indexOf(" ät") > -1 ){ //checks if the word "Umeå" & "län" exists in the question
 		    	document.getElementById("answer").innerHTML = "Mat.";
 		    }
+		     else if(question.indexOf("ät") === 0 ){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Mat.";
+		    }
+		     else if(question.indexOf(" åt") > -1 ){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Mat.";
+		    }
+		     else if(question.indexOf("åt") === 0 ){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Mat.";
+		    }
+
 		    else if(question.indexOf("är hästar blåa") > -1){ //checks if the substring "är hästar blåa" exists in the question
 		    	document.getElementById("answer").innerHTML = "Ibland.";
 		    }
@@ -99,7 +113,9 @@
 			var  backgrounds = ["http://static1.squarespace.com/static/50357984e4b09af678ed11bf/53a24506e4b0a429a264aa7d/53a2455ee4b0225287143477/1403143521238/empire+state+building+office+rendering.jpg?format=1500w","http://thewowstyle.com/wp-content/uploads/2015/04/download-backgrounds.jpg","http://www.getitcut.com/images/office-interiors-architectural-renderings-by-dbox-wallpaper-15.jpg","http://wallcomphd.com/wp-content/uploads/2015/06/Fantasy-Castle-Wallpaper-Widescreen-HD.jpg","http://hdwallpapersfactory.com/thumbnail/earth_as_we_know_it_hey_anons_just_desktop_1920x1200_hd-wallpaper-828796.jpg","http://www.channel4.com/microsites/I/it-crowd/wallpapers/2048x1280.jpg","http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2014/02/searching_for_exoplanetary_systems/14282306-1-eng-GB/Searching_for_exoplanetary_systems.jpg","http://www.wallspick.com/wp-content/uploads/2015/05/small_sea_wave-640x360.jpg","http://theresilientearth.com/files/images/coral_reef_4.jpg"];
 			var i = backgrounds.length;
 			var backgroundPosition = Math.floor((Math.random() * i) );
+			newBackground = backgrounds[backgroundPosition];
 			changeBackground(backgrounds[backgroundPosition]);
+			return newBackground
 
 
 		}
