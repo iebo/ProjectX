@@ -88,6 +88,15 @@
  		   document.body.style.background = "url('"+backgroundLink+"') no-repeat center top";
 		}
 
+		function randomBackground(){
+			var  backgrounds = ["http://static1.squarespace.com/static/50357984e4b09af678ed11bf/53a24506e4b0a429a264aa7d/53a2455ee4b0225287143477/1403143521238/empire+state+building+office+rendering.jpg?format=1500w","http://thewowstyle.com/wp-content/uploads/2015/04/download-backgrounds.jpg"];
+			var i = backgrounds.length;
+			var backgroundPosition = Math.floor((Math.random() * i) );
+			changeBackground(backgrounds[backgroundPosition]);
+
+
+		}
+
 		function ifNoAnswer (){
 			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new local variable x
 			if (x > 50){
@@ -106,7 +115,6 @@
 		
 		function insultGenerator(){ //script that chooses a random insult
 			
-			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new local variable x
 			var insults = ["Är du helt dum i huvudet?", "Den här snubben kan ju inte stava.", "Hur kan du fråga det?", "Vilken dum fråga!", "Va?", "Lär dig att stava.","Skriv så att man förstår dig.", "Vilken bra fråga", "Lysande Sickan!", "Nästa fråga", "Jag undrar samma sak", "Vet du inte det?", "Det kan ju till och med en femåring.", "Kan du inte svara på det själv?", "Aldrig har jag hört något sådant.", "Aldrig har jag hört något så dumt.", "Kan du skriva läsligt nästa gång?", "Vad pratar du om?", "Grattis.", "Jag fattar inte vad du snackar om.", "Frågar du alltid så konstiga frågor?", "Jag har aldrig hört någonting så dumt!", "Vad menar du med det?", "Varför frågar du?", "Varför undrar du?", "Blev du tappad när du var liten?"]; 
 			var i = insults.length;
 			var insultPosition = Math.floor((Math.random() * i) );
