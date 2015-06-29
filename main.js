@@ -30,7 +30,7 @@
 		    }
 		     else if(question.indexOf("sett") > -1 && question.indexOf("spöke") > -1){ //checks if the word "sett" & "spöke" exists in the question.
 		    	changeToLink("http://www.clker.com/cliparts/Q/j/a/y/T/q/ghost.svg", "Nu har du.");
-		        document.body.style.background = "url('http://www.clker.com/cliparts/Q/j/a/y/T/q/ghost.svg') no-repeat center";
+		        changeBackground("http://www.clker.com/cliparts/Q/j/a/y/T/q/ghost.svg");
 		    }
 		     else if(question.indexOf("ufo") > -1){ //checks if the word "ufo" exists in the question.
 		    	changeToLink("https://en.wikipedia.org/wiki/Unidentified_flying_object", "UFO:n finns.");
@@ -84,6 +84,9 @@
 			document.getElementById("answer").innerHTML = result;
 		}
 
+		function changeBackground(backgroundLink) {
+ 		   document.body.style.background = "url('"+backgroundLink+"') no-repeat center top";
+		}
 
 		function ifNoAnswer (){
 			var x = Math.floor((Math.random() * 100) + 1); //assigns random integer between 1 and 100 to the new local variable x
