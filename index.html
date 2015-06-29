@@ -26,8 +26,8 @@
 
 					<img  id="gubbe1" src="http://vignette1.wikia.nocookie.net/meme/images/1/1d/CG.png/revision/latest?cb=20110820234845">
 					<img   id="prat1" src="Bilder/Speech-Bubble-Question.png">
-					<input  type="text" id="question" value=""> <!--tar emot frågan -->
-                    <button  type="button" class="btn  btn-primary" onclick="questionAI()">Fråga!</button>
+					<input onkeydown="if (event.keyCode == 13) document.getElementById('fragaButton').click()" type="text" id="question" value=""> <!--tar emot frågan -->
+                    <button  id = "fragaButton" type="button" class="btn  btn-primary" onclick="questionAI()">Fråga!</button>
 
 				</div>
 
@@ -44,7 +44,7 @@
 					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 					<script src="main.js">
-						
+
 					</script>
 
 					<!-- Här är Toms bild -->
