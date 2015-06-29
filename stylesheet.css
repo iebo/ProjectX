@@ -40,6 +40,11 @@
 	bottom: 0px;
 }
 
+.questionAndBubble{
+	border:solid blue;
+	margin-left: 10%;
+}
+
 #answer {
 	margin-top: 15%;
 	margin-left: -41%;
