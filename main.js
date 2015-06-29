@@ -68,6 +68,12 @@
 		    else if(question.indexOf("mening") > -1 && question.indexOf("livet") > -1){ //checks if the word "mening" & "livet" exists in the question
 		    	document.getElementById("answer").innerHTML = "Att vara i Umeå och 42.";
 		    }
+		     else if(question.indexOf("heter") > -1 && question.indexOf("du") > -1){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Tom";
+			}
+		     else if(question.indexOf("äta")|| ("äter")|| ("åt")|| ("ätit") > -1 ){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Mat.";
+		    }
 		    else if(question.indexOf("är hästar blåa") > -1){ //checks if the substring "är hästar blåa" exists in the question
 		    	document.getElementById("answer").innerHTML = "Ibland.";
 		    }
