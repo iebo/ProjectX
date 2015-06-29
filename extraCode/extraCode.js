@@ -10,3 +10,6 @@ function addImage(imageLink, imageID) {
 			    x.setAttribute("alt", imageID);
 			    document.body.appendChild(x);
 		}
+
+
+document.body.style.background = "url('http://www.clker.com/cliparts/Q/j/a/y/T/q/ghost.svg') no-repeat center"
