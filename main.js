@@ -133,7 +133,7 @@
 			} else if (x > 25) {
 				changeToLink("http://lmgtfy.com/?q=" + questionAsked, "Tryck här") 
 			} else {
-				document.getElementById("answer").innerHTML = 'Det beror på vad du menar med:' + ' "' + questionAsked + '"';
+				document.getElementById("answer").innerHTML = 'Det beror på vad du menar med:' + ' "' + questionAsked + '".';
 
 			}
 
@@ -144,7 +144,7 @@
 		
 		function insultGenerator(){ //script that chooses a random insult
 			
-			var insults = ["Är du helt dum i huvudet?", "Den här snubben kan ju inte stava.", "Hur kan du fråga det?", "Vilken dum fråga!", "Va?", "Lär dig att stava.","Skriv så att man förstår dig.", "Vilken bra fråga", "Lysande Sickan!", "Nästa fråga", "Jag undrar samma sak", "Vet du inte det?", "Det kan ju till och med en femåring.", "Kan du inte svara på det själv?", "Aldrig har jag hört något sådant.", "Aldrig har jag hört något så dumt.", "Kan du skriva läsligt nästa gång?", "Vad pratar du om?", "Grattis.", "Jag fattar inte vad du snackar om.", "Frågar du alltid så konstiga frågor?", "Jag har aldrig hört någonting så dumt!", "Vad menar du med det?", "Varför frågar du?", "Varför undrar du?", "Blev du tappad när du var liten?"]; 
+			var insults = ["Är du helt dum i huvudet?", "Den här snubben kan ju inte stava.", "Hur kan du fråga det?", "Vilken dum fråga!", "Va?", "Lär dig att stava.","Skriv så att man förstår dig.", "Vilken bra fråga.", "Lysande Sickan!", "Nästa fråga.", "Jag undrar samma sak.", "Vet du inte det?", "Det kan ju till och med en femåring.", "Kan du inte svara på det själv?", "Aldrig har jag hört något sådant.", "Aldrig har jag hört något så dumt.", "Kan du skriva läsligt nästa gång?", "Vad pratar du om?", "Grattis.", "Jag fattar inte vad du snackar om.", "Frågar du alltid så konstiga frågor?", "Jag har aldrig hört någonting så dumt!", "Vad menar du med det?", "Varför frågar du?", "Varför undrar du?", "Blev du tappad när du var liten?"]; 
 			var i = insults.length;
 			var insultPosition = Math.floor((Math.random() * i) );
 			document.getElementById("answer").innerHTML = insults [insultPosition];
