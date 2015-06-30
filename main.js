@@ -75,6 +75,10 @@
 		    changeToLink("Bilder/allma¦ên-info.jpg", "Umeå är fantastiskt.");
 		    	changeBackground("Bilder/allma¦ên-info.jpg");
 		    }
+		    else if(question.indexOf("umeå") > -1 ){ //checks if the word "mening" & "livet" exists in the question
+				changeToLink("Bilder/69932_03_10_03_flygbild_um.jpg", "Umeå är en stad.");
+		        changeBackground("Bilder/69932_03_10_03_flygbild_um.jpg");
+		    }		    
 		    else if(question.indexOf("mening") > -1 && question.indexOf("livet") > -1){ //checks if the word "mening" & "livet" exists in the question
 		    	document.getElementById("answer").innerHTML = "Att vara i Umeå och 42.";
 		    }
