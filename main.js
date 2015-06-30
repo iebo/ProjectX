@@ -55,19 +55,25 @@
 		    	document.getElementById("answer").innerHTML = "Det beror på vad man menar med lever.";
 		    }
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("stad") > -1){ //checks if the word "Umeå" & "stad" exists in the question
-		    	document.getElementById("answer").innerHTML = "Umeå är en stad.";
+		    	changeToLink("Bilder/69932_03_10_03_flygbild_um.jpg", "Umeå är en stad.");
+		        changeBackground("Bilder/69932_03_10_03_flygbild_um.jpg");
 		    }
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("land") > -1){ //checks if the word "Umeå" & "land" exists in the question
-		    	document.getElementById("answer").innerHTML = "Umeå är inte ett land. Umeå ligger i Sverige";
+		    	changeToLink("BIlder/sverige2.png", "Umeå är inte ett land. Umeå ligger i Sverige.");
+		        changeBackground("Bilder/sverige2.png");
 		    }
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("kommun") > -1){ //checks if the word "Umeå" & "kommun" exists in the question
 		    	changeToLink("http://www.umea.se/umeakommun.4.1821d6e811c67c7e79580004672.html", "Umeå är en kommun.");
+		    	changeBackground("Bilder/kommun.jpg");
 		    }
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("län") > -1){ //checks if the word "Umeå" & "län" exists in the question
-		    	document.getElementById("answer").innerHTML = "Umeå är inte ett län. Umeå ligger i Västerbottens län.";
+		    	document.getElementById("answer").innerHTML = "";
+		    	changeToLink("http://www.lansstyrelsen.se/vasterbotten/Sv/Pages/default.aspx", "Umeå är inte ett län. Umeå ligger i Västerbottens län.");
+		    	changeBackground("http://www.lansstyrelsen.se/vasterbotten/_catalogs/masterpage/_layouts/LST-Images/Logotyp_mosswebb_start_liggande_75procent.png");
 		    }
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("är") > -1){ //checks if the word "Umeå" & "är" exists in the question
-		    	document.getElementById("answer").innerHTML = "Umeå är fantastiskt.";
+		    changeToLink("Bilder/allma¦ên-info.jpg", "Umeå är fantastiskt.");
+		    	changeBackground("Bilder/allma¦ên-info.jpg");
 		    }
 		    else if(question.indexOf("mening") > -1 && question.indexOf("livet") > -1){ //checks if the word "mening" & "livet" exists in the question
 		    	document.getElementById("answer").innerHTML = "Att vara i Umeå och 42.";
