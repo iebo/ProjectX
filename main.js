@@ -76,7 +76,7 @@
 		    	changeBackground("Bilder/allma¦ên-info.jpg");
 		    }
 		    else if(question.indexOf("umeå") > -1 ){ //checks if the word "mening" & "livet" exists in the question
-				changeToLink("Bilder/69932_03_10_03_flygbild_um.jpg", "Umeå är en stad.");
+				changeToLink("https://www.google.se/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=ume%C3%A5", "Umeå är en stad i norra Sverige.");
 		        changeBackground("Bilder/69932_03_10_03_flygbild_um.jpg");
 		    }		    
 		    else if(question.indexOf("mening") > -1 && question.indexOf("livet") > -1){ //checks if the word "mening" & "livet" exists in the question
