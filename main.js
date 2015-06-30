@@ -1,7 +1,11 @@
-
+		var newBackground = "";
 		var questionAsked = "";
+
 		function questionAI() {
+			changeBackground(newBackground);
+			
 			questionAsked = document.getElementById("question").value;		    
+
 		    var question = document.getElementById("question").value;
 		    var question = question.toLowerCase(); //sets all letters in question to lowercase so that the question is not case sensitive
 		    if(question.length === 0){ //checks if there are any characters in the question
@@ -51,23 +55,45 @@
 		    	document.getElementById("answer").innerHTML = "Det beror på vad man menar med lever.";
 		    }
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("stad") > -1){ //checks if the word "Umeå" & "stad" exists in the question
-		    	document.getElementById("answer").innerHTML = "Umeå är en stad.";
+		    	changeToLink("Bilder/69932_03_10_03_flygbild_um.jpg", "Umeå är en stad.");
+		        changeBackground("Bilder/69932_03_10_03_flygbild_um.jpg");
 		    }
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("land") > -1){ //checks if the word "Umeå" & "land" exists in the question
-		    	document.getElementById("answer").innerHTML = "Umeå är inte ett land. Umeå ligger i Sverige";
+		    	changeToLink("BIlder/sverige2.png", "Umeå är inte ett land. Umeå ligger i Sverige.");
+		        changeBackground("Bilder/sverige2.png");
 		    }
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("kommun") > -1){ //checks if the word "Umeå" & "kommun" exists in the question
 		    	changeToLink("http://www.umea.se/umeakommun.4.1821d6e811c67c7e79580004672.html", "Umeå är en kommun.");
+		    	changeBackground("Bilder/kommun.jpg");
 		    }
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("län") > -1){ //checks if the word "Umeå" & "län" exists in the question
-		    	document.getElementById("answer").innerHTML = "Umeå är inte ett län. Umeå ligger i Västerbottens län.";
+		    	document.getElementById("answer").innerHTML = "";
+		    	changeToLink("http://www.lansstyrelsen.se/vasterbotten/Sv/Pages/default.aspx", "Umeå är inte ett län. Umeå ligger i Västerbottens län.");
+		    	changeBackground("http://www.lansstyrelsen.se/vasterbotten/_catalogs/masterpage/_layouts/LST-Images/Logotyp_mosswebb_start_liggande_75procent.png");
 		    }
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("är") > -1){ //checks if the word "Umeå" & "är" exists in the question
-		    	document.getElementById("answer").innerHTML = "Umeå är fantastiskt.";
+		    changeToLink("Bilder/allma¦ên-info.jpg", "Umeå är fantastiskt.");
+		    	changeBackground("Bilder/allma¦ên-info.jpg");
 		    }
 		    else if(question.indexOf("mening") > -1 && question.indexOf("livet") > -1){ //checks if the word "mening" & "livet" exists in the question
 		    	document.getElementById("answer").innerHTML = "Att vara i Umeå och 42.";
 		    }
+		     else if(question.indexOf("heter") > -1 && question.indexOf("du") > -1){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Tom";
+			}
+		     else if(question.indexOf(" ät") > -1 ){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Mat.";
+		    }
+		     else if(question.indexOf("ät") === 0 ){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Mat.";
+		    }
+		     else if(question.indexOf(" åt") > -1 ){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Mat.";
+		    }
+		     else if(question.indexOf("åt") === 0 ){ //checks if the word "Umeå" & "län" exists in the question
+		    	document.getElementById("answer").innerHTML = "Mat.";
+		    }
+
 		    else if(question.indexOf("är hästar blåa") > -1){ //checks if the substring "är hästar blåa" exists in the question
 		    	document.getElementById("answer").innerHTML = "Ibland.";
 		    }
@@ -93,7 +119,9 @@
 			var  backgrounds = ["http://static1.squarespace.com/static/50357984e4b09af678ed11bf/53a24506e4b0a429a264aa7d/53a2455ee4b0225287143477/1403143521238/empire+state+building+office+rendering.jpg?format=1500w","http://thewowstyle.com/wp-content/uploads/2015/04/download-backgrounds.jpg","http://www.getitcut.com/images/office-interiors-architectural-renderings-by-dbox-wallpaper-15.jpg","http://wallcomphd.com/wp-content/uploads/2015/06/Fantasy-Castle-Wallpaper-Widescreen-HD.jpg","http://hdwallpapersfactory.com/thumbnail/earth_as_we_know_it_hey_anons_just_desktop_1920x1200_hd-wallpaper-828796.jpg","http://www.channel4.com/microsites/I/it-crowd/wallpapers/2048x1280.jpg","http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2014/02/searching_for_exoplanetary_systems/14282306-1-eng-GB/Searching_for_exoplanetary_systems.jpg","http://www.wallspick.com/wp-content/uploads/2015/05/small_sea_wave-640x360.jpg","http://theresilientearth.com/files/images/coral_reef_4.jpg","http://hdscreen.me/walls/military/charles-bridge-czech-republic-europe-2807694-2808x1872.jpg"];
 			var i = backgrounds.length;
 			var backgroundPosition = Math.floor((Math.random() * i) );
+			newBackground = backgrounds[backgroundPosition];
 			changeBackground(backgrounds[backgroundPosition]);
+			return newBackground
 
 
 		}
@@ -105,7 +133,7 @@
 			} else if (x > 25) {
 				changeToLink("http://lmgtfy.com/?q=" + questionAsked, "Tryck här") 
 			} else {
-				document.getElementById("answer").innerHTML = 'Det beror på vad du menar med:' + ' "' + questionAsked + '"';
+				document.getElementById("answer").innerHTML = 'Det beror på vad du menar med:' + ' "' + questionAsked + '".';
 
 			}
 
@@ -116,7 +144,7 @@
 		
 		function insultGenerator(){ //script that chooses a random insult
 			
-			var insults = ["Är du helt dum i huvudet?", "Den här snubben kan ju inte stava.", "Hur kan du fråga det?", "Vilken dum fråga!", "Va?", "Lär dig att stava.","Skriv så att man förstår dig.", "Vilken bra fråga", "Lysande Sickan!", "Nästa fråga", "Jag undrar samma sak", "Vet du inte det?", "Det kan ju till och med en femåring.", "Kan du inte svara på det själv?", "Aldrig har jag hört något sådant.", "Aldrig har jag hört något så dumt.", "Kan du skriva läsligt nästa gång?", "Vad pratar du om?", "Grattis.", "Jag fattar inte vad du snackar om.", "Frågar du alltid så konstiga frågor?", "Jag har aldrig hört någonting så dumt!", "Vad menar du med det?", "Varför frågar du?", "Varför undrar du?", "Blev du tappad när du var liten?"]; 
+			var insults = ["Är du helt dum i huvudet?", "Den här snubben kan ju inte stava.", "Hur kan du fråga det?", "Vilken dum fråga!", "Va?", "Lär dig att stava.","Skriv så att man förstår dig.", "Vilken bra fråga.", "Lysande Sickan!", "Nästa fråga.", "Jag undrar samma sak.", "Vet du inte det?", "Det kan ju till och med en femåring.", "Kan du inte svara på det själv?", "Aldrig har jag hört något sådant.", "Aldrig har jag hört något så dumt.", "Kan du skriva läsligt nästa gång?", "Vad pratar du om?", "Grattis.", "Jag fattar inte vad du snackar om.", "Frågar du alltid så konstiga frågor?", "Jag har aldrig hört någonting så dumt!", "Vad menar du med det?", "Varför frågar du?", "Varför undrar du?", "Blev du tappad när du var liten?"]; 
 			var i = insults.length;
 			var insultPosition = Math.floor((Math.random() * i) );
 			document.getElementById("answer").innerHTML = insults [insultPosition];
