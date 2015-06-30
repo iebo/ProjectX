@@ -4,16 +4,23 @@ body{
 
 
 #prat1 {
-	margin-top: 10%;
-	margin-left: 25%;
+	margin-top: 30%;
+	margin-left: 45%;
 	display: inline;
 	position: absolute;
 	z-index: -1;
 }
 
+#prat2 {
+
+	margin-top: 34%;
+	margin-left: 25%;
+	position:absolute;
+}
+
 #question {
-	margin-left: 32%;
-	margin-top: 24%;
+	margin-left: 53%;
+	margin-top: 44%;
 	z-index: 900;
 	display: inline;
 }
@@ -47,8 +54,8 @@ body{
 
 
 #answer {
-	margin-top: 15%;
-	margin-left: -41%;
+	margin-top: 47%;
+	margin-left: 28%;
 	position: absolute;
 	z-index: 800;
 	background-color: white;
