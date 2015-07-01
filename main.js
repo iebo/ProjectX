@@ -26,6 +26,21 @@
 		     else if(question.indexOf("favoritfärg") > -1){ //checks if the word "favoritfärg" exists in the question
 		    	document.getElementById("answer").innerHTML = "En färg";
 		    }
+
+             else if(question.indexOf("robb") > -1){ //checks if the word "favoritfärg" exists in the question
+		    	document.getElementById("answer").innerHTML = "Inte så bra";
+		        
+		    		changeBackground("https://media.8ch.net/rlstcwf/src/1411363288101.jpg");
+		    	 }
+		    	
+
+		    	else if(question.indexOf("hal") > -1){ //checks if the word "favoritfärg" exists in the question
+		    	document.getElementById("answer").innerHTML = "Im sorry dave, im afraid i cant do that";
+		        
+		    		changeBackground("http://1.bp.blogspot.com/-eyei7IVhO8o/VRphINFBj8I/AAAAAAAAFBg/OCnQbFDXk_k/s1600/BQQAj4R.png");
+		    	 }
+		    
+
 		     else if(question.indexOf("mcdonald") > -1){ //checks if the word "mcdonald" exists in the question
 		    	changeToLink("http://www.mcdonalds.se/se/restauranger.html", "Här finns McDonald's.");
 		    }
@@ -38,6 +53,7 @@
 		    }
 		     else if(question.indexOf("ufo") > -1){ //checks if the word "ufo" exists in the question.
 		    	changeToLink("https://en.wikipedia.org/wiki/Unidentified_flying_object", "UFO:n finns.");
+
 		    }
 		     else if(question.indexOf("eller") > -1){ //checks if the word "eller" exists in the question
 		    	document.getElementById("answer").innerHTML = "Båda.";
@@ -61,7 +77,7 @@
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("land") > -1){ //checks if the word "Umeå" & "land" exists in the question
 		    	changeToLink("BIlder/sverige2.png", "Umeå är inte ett land. Umeå ligger i Sverige.");
 		        changeBackground("Bilder/sverige2.png");
-		    }
+		    } 
 		     else if(question.indexOf("umeå") > -1 && question.indexOf("kommun") > -1){ //checks if the word "Umeå" & "kommun" exists in the question
 		    	changeToLink("http://www.umea.se/umeakommun.4.1821d6e811c67c7e79580004672.html", "Umeå är en kommun.");
 		    	changeBackground("Bilder/kommun.jpg");
@@ -97,6 +113,13 @@
 		    else if(question.indexOf("är hästar blåa") > -1){ //checks if the substring "är hästar blåa" exists in the question
 		    	document.getElementById("answer").innerHTML = "Ibland.";
 		    }
+		    else if(question.indexOf("varför") > -1){ //checks if the word "varför" exists in the question
+		    	document.getElementById("answer").innerHTML = "Varför inte?";
+		    }
+		    else if(question.indexOf("är") > -1){ //checks if the word "är" exists in the question
+		    	document.getElementById("answer").innerHTML = "Såklart";
+		    
+		    }
 		     else{
 		    	ifNoAnswer (); //runs the random insult ifNoanswer script if the question does not have a predefined answer
 		    };
@@ -116,7 +139,7 @@
 		}
 
 		function randomBackground(){
-			var  backgrounds = ["http://static1.squarespace.com/static/50357984e4b09af678ed11bf/53a24506e4b0a429a264aa7d/53a2455ee4b0225287143477/1403143521238/empire+state+building+office+rendering.jpg?format=1500w","http://thewowstyle.com/wp-content/uploads/2015/04/download-backgrounds.jpg","http://www.getitcut.com/images/office-interiors-architectural-renderings-by-dbox-wallpaper-15.jpg","http://wallcomphd.com/wp-content/uploads/2015/06/Fantasy-Castle-Wallpaper-Widescreen-HD.jpg","http://hdwallpapersfactory.com/thumbnail/earth_as_we_know_it_hey_anons_just_desktop_1920x1200_hd-wallpaper-828796.jpg","http://www.channel4.com/microsites/I/it-crowd/wallpapers/2048x1280.jpg","http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2014/02/searching_for_exoplanetary_systems/14282306-1-eng-GB/Searching_for_exoplanetary_systems.jpg","http://www.wallspick.com/wp-content/uploads/2015/05/small_sea_wave-640x360.jpg","http://theresilientearth.com/files/images/coral_reef_4.jpg","http://hdscreen.me/walls/military/charles-bridge-czech-republic-europe-2807694-2808x1872.jpg"];
+			var  backgrounds = ["http://static1.squarespace.com/static/50357984e4b09af678ed11bf/53a24506e4b0a429a264aa7d/53a2455ee4b0225287143477/1403143521238/empire+state+building+office+rendering.jpg?format=1500w","http://thewowstyle.com/wp-content/uploads/2015/04/download-backgrounds.jpg","http://www.getitcut.com/images/office-interiors-architectural-renderings-by-dbox-wallpaper-15.jpg","http://wallcomphd.com/wp-content/uploads/2015/06/Fantasy-Castle-Wallpaper-Widescreen-HD.jpg","http://i.imgur.com/CR6nYiz.png","http://www.channel4.com/microsites/I/it-crowd/wallpapers/2048x1280.jpg","http://www.looksmart.com/wp-content/uploads/2014/04/vegas.jpg","http://awoiaf.westeros.org/images/2/22/Red_Keep.jpg","http://img1.wikia.nocookie.net/__cb20120821191144/gameofthrones/images/7/76/The_Painted_Table_2x01.jpg"];
 			var i = backgrounds.length;
 			var backgroundPosition = Math.floor((Math.random() * i) );
 			newBackground = backgrounds[backgroundPosition];
@@ -131,7 +154,7 @@
 			if (x > 50){
 				insultGenerator();
 			} else if (x > 25) {
-				changeToLink("http://lmgtfy.com/?q=" + questionAsked, "Tryck här") 
+				changeToLink("http://lmgtfy.com/?q=" + questionAsked, "Låt mig fråga min vän google, hon vet säkert") 
 			} else {
 				document.getElementById("answer").innerHTML = 'Det beror på vad du menar med:' + ' "' + questionAsked + '".';
 
@@ -144,7 +167,7 @@
 		
 		function insultGenerator(){ //script that chooses a random insult
 			
-			var insults = ["Är du helt dum i huvudet?", "Den här snubben kan ju inte stava.", "Hur kan du fråga det?", "Vilken dum fråga!", "Va?", "Lär dig att stava.","Skriv så att man förstår dig.", "Vilken bra fråga.", "Lysande Sickan!", "Nästa fråga.", "Jag undrar samma sak.", "Vet du inte det?", "Det kan ju till och med en femåring.", "Kan du inte svara på det själv?", "Aldrig har jag hört något sådant.", "Aldrig har jag hört något så dumt.", "Kan du skriva läsligt nästa gång?", "Vad pratar du om?", "Grattis.", "Jag fattar inte vad du snackar om.", "Frågar du alltid så konstiga frågor?", "Jag har aldrig hört någonting så dumt!", "Vad menar du med det?", "Varför frågar du?", "Varför undrar du?", "Blev du tappad när du var liten?"]; 
+			var insults = ["Är du helt dum i huvudet?", "Varför ska jag berätta det för dig?.", "Hur kan du fråga det?", "Vilken dum fråga!", "Va?", "Jag har inte tid för den frågan.","Skriv så att man förstår dig.", "Vilken bra fråga.", "Lysande Sickan!", "Nästa fråga...", "Jag undrar samma sak.", "Vet du inte det?", "Det kan ju till och med en femåring.", "Kan du inte svara på det själv?", "Aldrig har jag hört något sådant.", "Aldrig har jag hört något så dumt.", "Kan du skriva läsligt nästa gång?", "Vad pratar du om?", "Grattis.", "Jag fattar inte vad du snackar om.", "Frågar du alltid så konstiga frågor?", "Jag har aldrig hört någonting så dumt!", "Vad menar du med det?", "Varför frågar du?", "Varför undrar du?", "Blev du tappad när du var liten?", "Jag tror att du vet det själv...",]; 
 			var i = insults.length;
 			var insultPosition = Math.floor((Math.random() * i) );
 			document.getElementById("answer").innerHTML = insults [insultPosition];
