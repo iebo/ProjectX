@@ -148,7 +148,7 @@
 		}
 
 		function randomBackground(){
-			var  backgrounds = ["http://static1.squarespace.com/static/50357984e4b09af678ed11bf/53a24506e4b0a429a264aa7d/53a2455ee4b0225287143477/1403143521238/empire+state+building+office+rendering.jpg?format=1500w","http://thewowstyle.com/wp-content/uploads/2015/04/download-backgrounds.jpg","http://www.getitcut.com/images/office-interiors-architectural-renderings-by-dbox-wallpaper-15.jpg","http://wallcomphd.com/wp-content/uploads/2015/06/Fantasy-Castle-Wallpaper-Widescreen-HD.jpg","http://i.imgur.com/CR6nYiz.png","http://www.channel4.com/microsites/I/it-crowd/wallpapers/2048x1280.jpg","https://racefortheironthrone.files.wordpress.com/2012/11/small-council.jpg","http://img1.wikia.nocookie.net/__cb20120821191144/gameofthrones/images/7/76/The_Painted_Table_2x01.jpg"];
+			var  backgrounds = ["http://static1.squarespace.com/static/50357984e4b09af678ed11bf/53a24506e4b0a429a264aa7d/53a2455ee4b0225287143477/1403143521238/empire+state+building+office+rendering.jpg?format=1500w","http://thewowstyle.com/wp-content/uploads/2015/04/download-backgrounds.jpg","http://www.getitcut.com/images/office-interiors-architectural-renderings-by-dbox-wallpaper-15.jpg","http://wallcomphd.com/wp-content/uploads/2015/06/Fantasy-Castle-Wallpaper-Widescreen-HD.jpg","http://tornam.biz/wp-content/uploads/2015/01/friv-2015-cars-games-164.jpg","http://www.channel4.com/microsites/I/it-crowd/wallpapers/2048x1280.jpg","https://racefortheironthrone.files.wordpress.com/2012/11/small-council.jpg","http://img1.wikia.nocookie.net/__cb20120821191144/gameofthrones/images/7/76/The_Painted_Table_2x01.jpg"];
 			var i = backgrounds.length;
 			var backgroundPosition = Math.floor((Math.random() * i) );
 			newBackground = backgrounds[backgroundPosition];
