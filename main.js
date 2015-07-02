@@ -30,7 +30,7 @@
              else if(question.indexOf("robb") > -1){ //checks if the word "favoritfärg" exists in the question
 		    	document.getElementById("answer").innerHTML = "Inte så bra";
 		        
-		    		changeBackground("https://media.8ch.net/rlstcwf/src/1411363288101.jpg");
+		    		changeBackground("http://watchersonthewall.com/wp-content/uploads/2015/05/Red-Wedding.jpg");
 		    	 }
 		    	
 
@@ -94,7 +94,10 @@
 		    else if(question.indexOf("umeå") > -1 ){ //checks if the word "mening" & "livet" exists in the question
 				changeToLink("https://www.google.se/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=ume%C3%A5", "Umeå är en stad i norra Sverige.");
 		        changeBackground("Bilder/69932_03_10_03_flygbild_um.jpg");
-		    }		    
+		    }
+		    else if(question.indexOf("favorit") > -1){ //checks if the word "är" exists in the question
+		    	document.getElementById("answer").innerHTML = "Jag har utvecklats långt bortom min simpla människoform men jag kan fortfarande inte välja en favorit....";	
+		    }	    
 		    else if(question.indexOf("mening") > -1 && question.indexOf("livet") > -1){ //checks if the word "mening" & "livet" exists in the question
 		    	document.getElementById("answer").innerHTML = "Att vara i Umeå och 42.";
 		    }
@@ -121,7 +124,9 @@
 		    	document.getElementById("answer").innerHTML = "Varför inte?";
 		    }
 		    else if(question.indexOf("är") > -1){ //checks if the word "är" exists in the question
-		    	document.getElementById("answer").innerHTML = "Såklart";
+		    	document.getElementById("answer").innerHTML = "Det är en svår fråga och den har många svar";
+
+
 		    
 		    }
 		     else{
@@ -143,7 +148,7 @@
 		}
 
 		function randomBackground(){
-			var  backgrounds = ["http://static1.squarespace.com/static/50357984e4b09af678ed11bf/53a24506e4b0a429a264aa7d/53a2455ee4b0225287143477/1403143521238/empire+state+building+office+rendering.jpg?format=1500w","http://thewowstyle.com/wp-content/uploads/2015/04/download-backgrounds.jpg","http://www.getitcut.com/images/office-interiors-architectural-renderings-by-dbox-wallpaper-15.jpg","http://wallcomphd.com/wp-content/uploads/2015/06/Fantasy-Castle-Wallpaper-Widescreen-HD.jpg","http://i.imgur.com/CR6nYiz.png","http://www.channel4.com/microsites/I/it-crowd/wallpapers/2048x1280.jpg","http://www.looksmart.com/wp-content/uploads/2014/04/vegas.jpg","http://awoiaf.westeros.org/images/2/22/Red_Keep.jpg","http://img1.wikia.nocookie.net/__cb20120821191144/gameofthrones/images/7/76/The_Painted_Table_2x01.jpg"];
+			var  backgrounds = ["http://static1.squarespace.com/static/50357984e4b09af678ed11bf/53a24506e4b0a429a264aa7d/53a2455ee4b0225287143477/1403143521238/empire+state+building+office+rendering.jpg?format=1500w","http://thewowstyle.com/wp-content/uploads/2015/04/download-backgrounds.jpg","http://www.getitcut.com/images/office-interiors-architectural-renderings-by-dbox-wallpaper-15.jpg","http://wallcomphd.com/wp-content/uploads/2015/06/Fantasy-Castle-Wallpaper-Widescreen-HD.jpg","http://i.imgur.com/CR6nYiz.png","http://www.channel4.com/microsites/I/it-crowd/wallpapers/2048x1280.jpg","https://racefortheironthrone.files.wordpress.com/2012/11/small-council.jpg","http://img1.wikia.nocookie.net/__cb20120821191144/gameofthrones/images/7/76/The_Painted_Table_2x01.jpg"];
 			var i = backgrounds.length;
 			var backgroundPosition = Math.floor((Math.random() * i) );
 			newBackground = backgrounds[backgroundPosition];
