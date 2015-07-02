@@ -9,10 +9,10 @@
 		    var question = document.getElementById("question").value;
 		    var question = question.toLowerCase(); //sets all letters in question to lowercase so that the question is not case sensitive
 		    if(question.length === 0){ //checks if there are any characters in the question
-		    	document.getElementById("answer").innerHTML = "Du måste skriva din fråga med hjälp av tangentbordet";
+		    	document.getElementById("answer").innerHTML = "Du måste skriva din fråga med hjälp av tangentbordet.";
 		    }
 		     else if(question.indexOf("?") < 0){ //checks if question has a question mark. if it does not it says "det där är inte en fråga"
-		    	document.getElementById("answer").innerHTML = "Det där är inte en fråga";//om det inte är en fråga
+		    	document.getElementById("answer").innerHTML = "Det där är inte en fråga.";//om det inte är en fråga
 		    }
 		     else if(question.indexOf("? ") > -1 && question.indexOf("?") > -1){
 		    	document.getElementById("answer").innerHTML = "En fråga åt gången.";//if the question contains two question marks.
@@ -24,7 +24,7 @@
 		    	document.getElementById("answer").innerHTML = "4";
 		    }
 		     else if(question.indexOf("favoritfärg") > -1){ //checks if the word "favoritfärg" exists in the question
-		    	document.getElementById("answer").innerHTML = "En färg";
+		    	document.getElementById("answer").innerHTML = "En färg.";
 		    }
 
              else if(question.indexOf("robb") > -1){ //checks if the word "favoritfärg" exists in the question
@@ -96,13 +96,13 @@
 		        changeBackground("Bilder/69932_03_10_03_flygbild_um.jpg");
 		    }
 		    else if(question.indexOf("favorit") > -1){ //checks if the word "är" exists in the question
-		    	document.getElementById("answer").innerHTML = "Jag har utvecklats långt bortom min simpla människoform men jag kan fortfarande inte välja en favorit....";	
+		    	document.getElementById("answer").innerHTML = "Jag har utvecklats långt bortom min simpla människoform men jag kan fortfarande inte välja en favorit...";	
 		    }	    
 		    else if(question.indexOf("mening") > -1 && question.indexOf("livet") > -1){ //checks if the word "mening" & "livet" exists in the question
 		    	document.getElementById("answer").innerHTML = "Att vara i Umeå och 42.";
 		    }
 		     else if(question.indexOf("heter") > -1 && question.indexOf("du") > -1){ //checks if the word "Umeå" & "län" exists in the question
-		    	document.getElementById("answer").innerHTML = "Tom";
+		    	document.getElementById("answer").innerHTML = "Tom.";
 			}
 		     else if(question.indexOf(" ät") > -1 ){ //checks if the word "Umeå" & "län" exists in the question
 		    	document.getElementById("answer").innerHTML = "Mat.";
@@ -124,7 +124,7 @@
 		    	document.getElementById("answer").innerHTML = "Varför inte?";
 		    }
 		    else if(question.indexOf("är") > -1){ //checks if the word "är" exists in the question
-		    	document.getElementById("answer").innerHTML = "Det är en svår fråga och den har många svar";
+		    	document.getElementById("answer").innerHTML = "Det är en svår fråga och den har många svar.";
 
 
 		    
